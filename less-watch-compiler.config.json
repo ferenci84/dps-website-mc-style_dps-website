@@ -1,0 +1,5 @@
+{
+    "watchFolder": "web/styles-dev",
+    "outputFolder": "web/styles-dev",
+    "sourceMap": true
+}

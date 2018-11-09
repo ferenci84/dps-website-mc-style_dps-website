@@ -1,0 +1,6 @@
+
+body, .main-container {
+    min-width: 320px; }
+
+.main-container {
+    max-width: 1125px; }

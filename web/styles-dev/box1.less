@@ -1,0 +1,229 @@
+@import "vars.css";
+
+.box {
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(var(--char-height) * 26);
+
+  > div {
+    flex-grow: 1;
+    --border-size: 0.06em;
+    --space-w: calc((var(--char-width) - var(--border-size)) / 2);
+    --space-h: calc((var(--char-height) - var(--border-size)) / 2);
+    border: var(--border-size) solid #ffffff;
+    padding: var(--space-h) var(--space-w);
+    margin: var(--space-h) var(--space-w);
+  }
+
+  > header {
+
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 var(--char-width);
+
+    h1, h2, h3 {
+      margin-bottom: 0;
+      margin-left: calc(var(--char-width) * 2);
+      background-color: #1818b2;
+      color: inherit;
+      padding: 0 var(--char-width);
+      width: fit-content;
+    }
+
+    &::after {
+      position: absolute;
+      right: calc(var(--char-width) * 1);
+      color: inherit;
+      background-color: #1818b2;
+      padding: 0;
+      top: 0;
+      content: '.[^]>';
+    }
+
+    &::before {
+      position: absolute;
+      left: calc(var(--char-width) * 1);
+      color: inherit;
+      background-color: #1818b2;
+      padding: 0;
+      top: 0;
+      content: '<';
+    }
+
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list .row {
+    display: flex;
+    flex-direction: column;
+    a {
+      display: flex;
+    }
+    > div {
+      display: flex;
+    }
+    > ul {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+    }
+    a.selected {
+      background-color: #18b2b2;
+      color: black;
+    }
+    div:nth-child(1) {
+      flex-grow: 1;
+      padding-left: var(--char-width);
+    }
+    > div:nth-child(1) {
+      padding-left: 0;
+      cursor: default;
+    }
+    .child {
+      div:nth-child(1) {
+        padding-left: calc(var(--char-width) * 3);
+      }
+    }
+  }
+
+  .list .column {
+    border-left: var(--border-size) solid #b2b2b2;
+    padding-left: var(--space-w);
+    margin-left: var(--space-w);
+    white-space: pre;
+
+    &.selected {
+      border-left-color: black;
+    }
+
+    &.size {
+      width: calc(var(--char-width) * 7);
+      &.head {
+        text-align: left;
+        &::after {
+          content: ' Size';
+        }
+      }
+      &.data {
+        text-align: right;
+        &::before {
+          content: attr(data-size);
+        }
+      }
+    }
+
+    &.time {
+      width: calc(var(--char-width) * 12);
+      &.head {
+        text-align: left;
+        &::after {
+          content: 'Modify Time';
+        }
+      }
+      &.data {
+        text-align: right;
+      }
+    }
+
+  }
+
+  .list  > header {
+
+    display: flex;
+    color: #ffff54;
+    font-weight: bold;
+    position: relative;
+
+    > div:nth-child(1) {
+      flex-grow: 1;
+      text-align: center;
+      &::before {
+        content: '\'n';
+        position: absolute;
+        left: 0;
+      }
+      &::after {
+        content: 'Name';
+      }
+    }
+
+    > div:nth-child(2) {
+      &:extend(.box .list .column);
+      &:extend(.box .list .column.size);
+      &:extend(.box .list .column.size.head all);
+    }
+
+    > div:nth-child(3) {
+      &:extend(.box .list .column);
+      &:extend(.box .list .column.time);
+      &:extend(.box .list .column.time.head all);
+    }
+
+  }
+
+  .list > ul > li {
+    div:nth-child(2) {
+      &:extend(.box .list .column);
+      &:extend(.box .list .column.size);
+      &:extend(.box .list .column.size.data all);
+    }
+    a.selected div:nth-child(2) {
+      &:extend(.box .list .column.selected);
+    }
+
+    div:nth-child(3) {
+      &:extend(.box .list .column);
+      &:extend(.box .list .column.time);
+      &:extend(.box .list .column.time.data all);
+    }
+    > a.selected div:nth-child(3) {
+      &:extend(.box .list .column.selected);
+    }
+  }
+
+  .list > .placeholder {
+
+    display: flex;
+    flex-grow: 1;
+
+    > div:nth-child(1) {
+      flex-grow: 1;
+    }
+
+    > div:nth-child(2) {
+      &:extend(.box .list .column);
+      &:extend(.box .list .column.size);
+      &:extend(.box .list .column.size.data all);
+    }
+
+    > div:nth-child(3) {
+      &:extend(.box .list .column);
+      &:extend(.box .list .column.time);
+      &:extend(.box .list .column.time.data all);
+    }
+
+  }
+
+
+  .list  > ul li {
+    &:extend(.box .list .row all);
+  }
+
+  .list  > ul > li > ul > li {
+    &:extend(.box .list .row .child all);
+  }
+
+
+}
+.two-box {
+  display: flex;
+}

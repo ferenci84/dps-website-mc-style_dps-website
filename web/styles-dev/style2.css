@@ -1,0 +1,433 @@
+
+@import "vars.css";
+
+body {
+    background: black;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-container > header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.explanation {
+    position: relative;
+    border-bottom: dotted 2px;
+    cursor: default;
+}
+
+.explanation .explanation-content {
+    display: none;
+}
+
+.explanation:hover .explanation-content {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #18b2b2;
+    color: white;
+    width: calc(var(--char-width) * 25);
+    z-index: 1;
+    padding: 0 var(--char-width);
+    border-top: solid 5px transparent;
+    background-clip: padding-box;
+}
+
+@media (max-width: 500px) {
+    .explanation:hover .explanation-content {
+        width: calc(var(--char-width) * 20);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #181818;
+}
+
+.container.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container.can-stretch {
+    flex-grow: 1;
+}
+
+.page-head {
+    padding: var(--char-height) calc(var(--char-width) * 2);
+}
+
+.page-head h1 {
+    --border-size: .15em;
+    display: flex;
+    margin: 0;
+}
+
+.page-head h1::before,
+.page-head h1::after
+{
+    content: '';
+    flex-grow: 1;
+    margin-bottom: calc((var(--char-height) - var(--border-size)) / 2);
+    border-bottom: var(--border-size) solid white;
+}
+
+.page-head h1::before {
+    margin-right: var(--char-width);
+}
+
+.page-head h1::after {
+    margin-left: var(--char-width);
+}
+
+.header-logo, .language-selector {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin: 0 calc(var(--char-width) * 2) 0 calc(var(--char-width) * 1);
+}
+
+.header-logo h3 {
+    display: flex;
+}
+
+.red-box {
+    background-color: #b21818;
+    color: #ffff54;
+    padding: var(--char-height) calc(var(--char-width) * 2);
+}
+
+.red-box p:last-child {
+    margin-bottom: 0;
+}
+
+.red-box em {
+    color: white;
+}
+
+.main-content {
+    padding: calc(var(--char-height) * 1) calc(var(--char-width) * 2) 0 calc(var(--char-width) * 2);
+}
+
+.main-content:first-child {
+    padding-top: 0;
+}
+
+.logo + .container.main {
+    /* margin-top: calc(var(--char-height) * -1); */
+}
+
+article {
+    color: #b2b2b2;
+}
+
+article ul {
+    margin-left: calc(var(--char-width) * 5);
+    margin-top: var(--char-height);
+    margin-bottom: var(--char-height);
+}
+
+article li {
+    margin-bottom: var(--char-height);
+    text-indent: -2ch;
+}
+
+article li::before {
+    content: '\25BA';
+    margin-right: 1ch;
+}
+
+article em {
+    color: #18ff18;
+}
+
+article a {
+    color: #18ffff;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/*
+.h2-wrapper-block {
+    margin-bottom: var(--char-height);
+}
+
+.h2-wrapper-block:not(:first-child) {
+    margin-top: calc(var(--char-height) * 2);
+}
+
+.h2-wrapper {
+    display: inline-flex;
+    margin-left: auto;
+    flex-direction: column;
+    color: white;
+}
+
+.h2-wrapper h2 {
+    display: flex;
+    color: #ffff54;
+    margin-left: var(--char-width);
+    margin-right: var(--char-width);
+}
+
+
+.h2-wrapper > div:nth-child(1),
+.h2-wrapper > div:nth-child(2),
+.h2-wrapper > div:nth-child(3)
+{
+    display: flex;
+}
+
+.h2-wrapper > div:nth-child(1) div,
+.h2-wrapper > div:nth-child(3) div
+{
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.h2-wrapper > div:nth-child(1) div::before,
+.h2-wrapper > div:nth-child(3) div::before
+{
+    content: '---------------------------------------------------------';
+    white-space: nowrap;
+    position: absolute;
+}
+
+.h2-wrapper > div:nth-child(1)::before,
+.h2-wrapper > div:nth-child(3)::before,
+.h2-wrapper > div:nth-child(1)::after,
+.h2-wrapper > div:nth-child(3)::after
+{
+    content: "//";
+}
+
+.h2-wrapper > div:nth-child(2) > div:nth-child(1),
+.h2-wrapper > div:nth-child(2) > div:nth-child(3) {
+    position: relative;
+    min-width: calc(var(--char-width) * 2);
+    overflow: hidden;
+}
+
+.h2-wrapper > div:nth-child(2) > div:nth-child(1)::before,
+.h2-wrapper > div:nth-child(2) > div:nth-child(3)::before
+{
+    content: "//\A //\A //";
+    position: absolute;
+}
+
+.h2-wrapper h2::before
+{
+    padding-right: var(--char-width);
+    color: white;
+}
+
+.h2-wrapper h2::after
+{
+    padding-left: var(--char-width);
+    color: white;
+}
+*/
+
+.hidden {
+    display: none!important;
+}
+
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+}
+
+nav a:hover:not(:link) {
+    cursor: default;
+}
+
+nav ul li {
+    position: relative;
+}
+
+.main-container > footer {
+    background: #181818;
+}
+
+.main-container > footer nav li {
+    counter-increment: step-counter;
+}
+
+.main-container > footer nav li {
+    margin-left: calc(var(--char-width) * 2);
+    margin-top: calc(var(--char-height) * 1);
+    flex-grow: 1;
+}
+
+.main-container > footer nav li:before {
+    content: counter(step-counter);
+    position: absolute;
+    right: 100%;
+    top: 0;
+    text-align: right;
+    padding: 0;
+}
+
+.main-container > header nav {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: stretch; */
+}
+
+.main-container > header > nav {
+    padding: 0 0 0 var(--char-width);
+}
+
+
+.main-container > header > nav nav {
+    padding: var(--space-h) var(--space-w);
+}
+
+.main-container > header nav .logo {
+    font-weight: bold;
+    color: white;
+}
+
+.main-container > header nav a {
+    padding: 0 var(--char-width);
+}
+
+.main-container > header nav a {
+    font-weight: bold;
+}
+
+.not-found {
+    margin: 2.5em auto 1.25em auto;
+    margin: calc(var(--char-height) * 2) auto calc(var(--char-height) * 1) auto;
+}
+
+@media (max-width: 800px) {
+    .not-found {
+        font-size: 2vw;
+    }
+}
+
+.not-found-text {
+    display: table;
+    margin: 0 auto ;
+}
+
+.main-container > header nav ul > li > nav {
+    display:none;
+    position: absolute;
+}
+
+.main-container > header nav ul > li > nav.shown {
+    display: block;
+}
+
+header nav ul > li > nav {
+    top: 100%;
+    left: 0;
+    padding: var(--space-h) var(--space-w);
+    z-index: 1;
+}
+
+header nav ul > li > nav > ul {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    border: var(--border-size) solid #ffffff;
+    padding: var(--space-h) var(--space-w);
+}
+
+#toggle-mobile-menu {
+    display: none;
+}
+
+@media (max-width: 950px) {
+    #toggle-mobile-menu {
+        display: block;
+        cursor: pointer;
+        padding: 0 var(--char-width);
+    }
+    .main-container > header {
+        flex-direction: column;
+    }
+    .main-container > header > nav#mobile-menu {
+        display: none;
+    }
+    .main-container > header > nav#mobile-menu.shown {
+        display: block;
+    }
+    .main-container > header > nav#mobile-menu ul > li > nav {
+        position: static;
+    }
+    .main-container > header > nav#mobile-menu > ul > li > a:hover:not(:link) {
+        cursor: pointer;
+    }
+    .main-container > header > nav#mobile-menu ul > li:hover > nav {
+        display: none;
+    }
+    .main-container > header > nav#mobile-menu ul > li > nav.shown {
+        display: block;
+    }
+    .main-container > header > nav#mobile-menu {
+        padding: var(--space-h) var(--space-w);
+    }
+    .main-container > header > nav#mobile-menu > ul {
+        flex-direction: column;
+        flex-grow: 1;
+        border: var(--border-size) solid #ffffff;
+        padding: var(--space-h) var(--space-w);
+    }
+    .main-container > header > nav#mobile-menu nav {
+        padding: 0;
+    }
+    .main-container > header > nav#mobile-menu ul > li > nav > ul {
+        border: none;
+        padding: 0 0 0 calc(var(--char-width) * 1);
+    }
+    .header-logo {
+        justify-content: space-between;
+    }
+    .main-container > header .language-selector {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-logo {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .header-logo h3 {
+        display: block;
+        margin: 0 0 var(--space-h) 0;
+        padding-bottom: var(--space-h);
+        padding-left: var(--char-width);
+        border-bottom: solid var(--border-size) #ffffff;
+    }
+    .header-logo #toggle-mobile-menu {
+        display: table;
+    }
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://artflowdesign.hu</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://artflowdesign.hu/en</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://artflowdesign.hu/hu/rolunk</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://artflowdesign.hu/en/about</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://artflowdesign.hu/hu/kapcsolat</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://artflowdesign.hu/en/contact</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://artflowdesign.hu/hu/adatkezelesi-tajekoztato</loc>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://artflowdesign.hu/en/privacy-policy</loc>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://artflowdesign.hu/hu/felhasznalasi-feltetelek</loc>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://artflowdesign.hu/en/terms-and-conditions</loc>
+    <priority>0.1</priority>
+  </url>
+
+</urlset>

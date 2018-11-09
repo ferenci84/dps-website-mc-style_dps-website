@@ -1,0 +1,113 @@
+@import "vars.css";
+
+.form-container {
+    --border-size: 0.1em;
+    --space-w: calc((var(--char-width) - var(--border-size)) / 2);
+    --space-h: calc((var(--char-height) - var(--border-size)) / 2);
+    background-color: #b2b2b2;
+    color: black;
+    padding: var(--char-height) var(--char-width);
+    padding: calc(var(--char-height) + var(--space-h)) calc(var(--char-width) + var(--space-w));
+    width: 100%;
+    box-sizing: border-box;
+    max-width: calc(var(--char-width) * 70);
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-container header {
+    position: absolute;
+    top: calc(var(--char-height));
+    left: 0;
+    right: 0;
+}
+
+.form-container header h3 {
+    margin: 0 auto;
+    display: table;
+    /* width: fit-content; */
+    background-color: #b2b2b2;
+    color: #1818b2;
+    padding: 0 var(--char-width);
+}
+
+form {
+    border: var(--border-size) solid black;
+}
+
+.form-container form .form-section {
+    padding: var(--space-h) var(--char-width);
+    padding: var(--space-h) calc(var(--char-width) + var(--space-w));
+}
+
+.form-container form .form-section:not(:first-child) {
+    border-top: var(--border-size) solid black;
+}
+
+
+form .text-input-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.text-input-container + .text-input-container,
+.text-input-container + .textarea-container,
+.textarea-container + .text-input-container
+{
+    margin-top: var(--char-height);
+}
+
+form .textarea-container {
+    display: flex;
+    flex-direction: column;
+}
+
+form .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+input, textarea, input.error, textarea.error {
+    display: block;
+    width: 100%;
+    flex-grow: 1;
+    background-color: #18b2b2;
+    color: black;
+}
+
+input:focus, textarea:focus {
+    background-color: #18b218;
+
+}
+
+input {
+
+}
+
+label.error {
+    /* width: 100%; */
+}
+
+
+button {
+    position: relative;
+    text-align: left;
+    width: fit-content;
+    color: black;
+}
+
+button span.hotkey {
+    color: #1818b2;
+}
+
+
+button::before {
+    content: '[';
+}
+
+
+button::after {
+    content: ']';
+}

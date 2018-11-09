@@ -1,0 +1,88 @@
+html, body {
+    background-color: black;
+}
+
+body {
+    color: white;
+}
+
+.box {
+    background-color: #1818b2;
+}
+
+.logo pre .yellow {
+    color: #ffff54;
+}
+
+.header-logo h3 {
+    color: #ffff54;
+}
+
+#toggle-mobile-menu:hover {
+    background: black;
+}
+
+#toggle-mobile-menu {
+    color: white;
+}
+
+#toggle-mobile-menu:first-letter {
+    color: #ffff54;
+}
+
+
+.warning {
+    color: #b26818;
+
+}
+
+.error {
+    color: #b21818;
+}
+
+.solution {
+    color: #18b218;
+}
+
+.emphasis, .tagline, .action, .info em {
+    color: #ffff54;
+}
+
+h1 {
+    color: white;
+}
+
+.main-container > header {
+    background: #18b2b2;
+    color: black;
+}
+
+.main-container > header > nav {
+    color: white;
+}
+
+header nav a {
+    color: white;
+}
+
+header nav a::first-letter {
+    color: #ffff54;
+}
+
+header nav a:hover, header nav a:active, header nav a:focus {
+    background-color: black;
+}
+
+footer nav ul {
+    color: white;
+}
+
+footer nav a {
+    background: #18b2b2;
+    color: black;
+    /* max-width: 25ch; */
+}
+
+header nav ul > li > nav {
+    background-color: #18b2b2;
+}

@@ -1,0 +1,137 @@
+@import url(vars.css);
+.h1-wrapper {
+  display: inline-flex;
+  margin-left: auto;
+  flex-direction: column;
+  color: white; }
+
+.h1-wrapper > div:nth-child(1),
+.h1-wrapper > div:nth-child(2),
+.h1-wrapper > div:nth-child(3) {
+  display: flex; }
+
+.h1-wrapper > div:nth-child(1) div,
+.h1-wrapper > div:nth-child(3) div {
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden; }
+
+.h1-wrapper > div:nth-child(1) div::before,
+.h1-wrapper > div:nth-child(3) div::before {
+  content: "------------------------------------------------------------------------------------------------------";
+  white-space: nowrap;
+  position: absolute; }
+
+.h1-wrapper > div:nth-child(1)::before,
+.h1-wrapper > div:nth-child(3)::before {
+  content: "/*"; }
+
+.h1-wrapper > div:nth-child(1)::after,
+.h1-wrapper > div:nth-child(3)::after {
+  content: "*/"; }
+
+.h1-wrapper > div:nth-child(2) > div:nth-child(1),
+.h1-wrapper > div:nth-child(2) > div:nth-child(3) {
+  position: relative;
+  min-width: calc(var(--char-width) * 2);
+  overflow: hidden; }
+
+.h1-wrapper > div:nth-child(2) > div:nth-child(1)::before {
+  content: "/*\a/*\a/*";
+  position: absolute; }
+
+.h1-wrapper > div:nth-child(2) > div:nth-child(3)::before {
+  content: "*/\a*/\a*/";
+  position: absolute; }
+
+.h1-wrapper h1::before {
+  padding-right: var(--char-width);
+  color: white; }
+
+.h1-wrapper h1::after {
+  padding-left: var(--char-width);
+  color: white; }
+
+.h1-wrapper {
+  display: flex;
+  color: #ffff54; }
+
+.h1-wrapper > div:nth-child(2) {
+  justify-content: space-between; }
+
+.main-content h1 {
+  color: #ffffff; }
+
+.h1-wrapper h1 {
+  display: block;
+  color: #ffffff;
+  margin: 0 var(--char-width); }
+
+.h2-wrapper {
+  display: inline-flex;
+  margin-left: auto;
+  flex-direction: column;
+  color: white; }
+
+.h2-wrapper > div:nth-child(1),
+.h2-wrapper > div:nth-child(2),
+.h2-wrapper > div:nth-child(3) {
+  display: flex; }
+
+.h2-wrapper > div:nth-child(1) div,
+.h2-wrapper > div:nth-child(3) div {
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden; }
+
+.h2-wrapper > div:nth-child(1) div::before,
+.h2-wrapper > div:nth-child(3) div::before {
+  content: "---------------------------------------------------------";
+  white-space: nowrap;
+  position: absolute; }
+
+.h2-wrapper > div:nth-child(1)::before,
+.h2-wrapper > div:nth-child(3)::before {
+  content: "//"; }
+
+.h2-wrapper > div:nth-child(1)::after,
+.h2-wrapper > div:nth-child(3)::after {
+  content: "//"; }
+
+.h2-wrapper > div:nth-child(2) > div:nth-child(1),
+.h2-wrapper > div:nth-child(2) > div:nth-child(3) {
+  position: relative;
+  min-width: calc(var(--char-width) * 2);
+  overflow: hidden; }
+
+.h2-wrapper > div:nth-child(2) > div:nth-child(1)::before {
+  content: "//\a//\a//";
+  position: absolute; }
+
+.h2-wrapper > div:nth-child(2) > div:nth-child(3)::before {
+  content: "//\a//\a//";
+  position: absolute; }
+
+.h2-wrapper h2::before {
+  padding-right: var(--char-width);
+  color: white; }
+
+.h2-wrapper h2::after {
+  padding-left: var(--char-width);
+  color: white; }
+
+.h2-wrapper h2 {
+  display: table;
+  color: #ffff54;
+  margin: 0 var(--char-width); }
+
+.h2-wrapper-block {
+  margin-bottom: var(--char-height); }
+
+.h2-wrapper-block:not(:first-child) {
+  margin-top: calc(var(--char-height) * 2); }
+
+h1 + .h2-wrapper-block:not(:first-child) {
+  margin-top: calc(var(--char-height) * 1); }
+
+/*# sourceMappingURL=headings.css.map */

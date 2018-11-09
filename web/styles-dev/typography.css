@@ -1,0 +1,109 @@
+@import "vars.css";
+
+@font-face {
+    font-family: "Commodore Rounded";
+    src: url(../fonts/Commodore_Rounded_v1.2.woff);
+    font-weight: bold;
+}
+
+
+body {
+    font-size: 16px;
+    line-height: 1.25;
+    font-family: "Commodore Rounded", monospace;
+}
+
+span.log {
+    display: block;
+}
+
+p {
+    margin-bottom: var(--char-height);
+}
+
+.log:not(.info) em {
+    font-weight: bold;
+}
+
+.log:not(.info) em::before {
+    content: '*';
+}
+
+.log:not(.info) em::after {
+    content: '*';
+}
+
+h1 {
+    margin-bottom: var(--char-height);
+}
+
+h2 {
+    color: #ffff54;
+    margin: var(--char-height) 0;
+}
+
+.log.info::before {
+    content: attr(data-time)' INFO';
+}
+
+.log.warning::before {
+    content: attr(data-time)' WARNING';
+    margin-right: 2ch;
+}
+
+.log.emphasis::before {
+    content: attr(data-time)' EMPHASIS';
+    margin-right: 1ch;
+}
+
+.log.tagline::before {
+    content: attr(data-time)' TAGLINE';
+    margin-right: 1ch;
+}
+
+.log.solution::before {
+    content: attr(data-time)' SOLUTION';
+    margin-right: 1ch;
+}
+
+.log.error::before, label.error::before {
+    content: attr(data-time)' ERROR';
+    margin-right: 4ch;
+}
+
+.log.action::before {
+    content: attr(data-time)' ACTION';
+    margin-right: .6em;
+}
+
+@media (max-width: 500px) {
+    .
+    .log.info::before {
+        content: 'INFO';
+    }
+
+    .log.warning::before {
+        content: 'WARNING';
+    }
+
+    .log.emphasis::before {
+        content: 'EMPHASIS';
+    }
+
+    .log.tagline::before {
+        content: 'TAGLINE';
+    }
+
+    .log.solution::before {
+        content: 'SOLUTION';
+    }
+
+    .log.error::before, label.error::before {
+        content: 'ERROR';
+    }
+
+    .log.action::before {
+        content: 'ACTION';
+    }
+
+}

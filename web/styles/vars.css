@@ -1,0 +1,1 @@
+:root{--char-width:1ch;--border-size-w:0.2ch;--char-height:1.25em;--border-size:0.2em;--space-w:calc((var(--char-width) - var(--border-size-w)) / 2);--space-h:calc((var(--char-height) - var(--border-size)) / 2)}
