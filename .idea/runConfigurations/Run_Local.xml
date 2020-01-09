@@ -3,6 +3,7 @@
     <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/dpswebsite" />
     <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
     <option name="COMMON_VM_ARGUMENTS" value=" -Ddps.ds.psql.name=DPSWebsite -Ddps.ds.psql.db.name=dpswebsite -Ddps.ds.psql.db.username=dpswebsite -Ddps.ds.psql.db.password=dpswebsite" />
+    <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
     <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
     <option name="UPDATING_POLICY" value="redeploy-artifacts" />
     <deployment>
@@ -14,11 +15,11 @@
       <option name="SERVER" />
       <option name="BINDING_SET_NAME" value="" />
       <option name="DOMAIN" value="false" />
-      <option name="SERVER_GROUP" value="main-server-group" />
+      <option name="SERVER_GROUP" />
       <option name="USERNAME" value="" />
-      <option name="PASSWORD" value="" />
+      <option name="CREDENTIAL_ALIAS" />
     </server-settings>
-    <predefined_log_file id="JBoss" enabled="true" />
+    <predefined_log_file enabled="true" id="JBoss" />
     <RunnerSettings RunnerId="Debug">
       <option name="DEBUG_PORT" value="56050" />
     </RunnerSettings>
@@ -26,6 +27,21 @@
       <option name="DEBUG_PORT" value="54919" />
       <option name="visualVMId" value="10290448128413" />
     </RunnerSettings>
+    <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+      <option name="USE_ENV_VARIABLES" value="true" />
+      <STARTUP>
+        <option name="USE_DEFAULT" value="true" />
+        <option name="SCRIPT" value="" />
+        <option name="VM_PARAMETERS" value="" />
+        <option name="PROGRAM_PARAMETERS" value="" />
+      </STARTUP>
+      <SHUTDOWN>
+        <option name="USE_DEFAULT" value="true" />
+        <option name="SCRIPT" value="" />
+        <option name="VM_PARAMETERS" value="" />
+        <option name="PROGRAM_PARAMETERS" value="" />
+      </SHUTDOWN>
+    </ConfigurationWrapper>
     <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
       <option name="USE_ENV_VARIABLES" value="true" />
       <STARTUP>
@@ -86,6 +102,10 @@
         <option name="PROGRAM_PARAMETERS" value="" />
       </SHUTDOWN>
     </ConfigurationWrapper>
-    <method />
+    <method v="2">
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="DPSWebsite:war exploded" />
+      </option>
+    </method>
   </configuration>
 </component>

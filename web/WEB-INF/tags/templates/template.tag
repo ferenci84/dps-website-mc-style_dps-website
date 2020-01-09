@@ -2,7 +2,6 @@
 --%><%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%--
 --%><%@taglib prefix="p" tagdir="/WEB-INF/tags/parts" %><%--
 --%><%@ attribute name="title" required="true" %><%--
---%><%@ attribute name="index" required="false" type="java.lang.Boolean" %><%--
 --%><%@ attribute name="keywords" required="false" %><%--
 --%><%@ attribute name="development" required="false" %><%--
 --%><%@ attribute name="description" required="false" %><%--
@@ -10,6 +9,8 @@
 --%><%@ attribute name="scriptsBottom" required="false" fragment="true" %><%--
 --%><%@ attribute name="styles" required="false" fragment="true" %><%--
 --%><%@ attribute name="deferredStyles" required="false" fragment="true" %><%--
+--%><%@ attribute name="robots" required="false" fragment="false" %><%--
+--%><%@ attribute name="index" required="false" fragment="false" %><%--
 --%><!DOCTYPE html>
 <html lang="${locale.tag}">
 <head>
@@ -19,7 +20,9 @@
     <meta name="keywords" lang="${locale.tag}" content="${keywords}" />
     <meta name="description" lang="${locale.tag}" content="${description}" />
 
-    <meta name="robots" content="index,follow" />
+    <c:if test="${not empty robots}">
+        <meta name="robots" content="${robots}" />
+    </c:if>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,6 +38,18 @@
     <jsp:invoke fragment="styles" />
 
     <script src="${root}scripts/index.js"></script>
+
+    <c:if test="${not dev}">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129033182-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-129033182-1');
+        </script>
+    </c:if>
 
     <jsp:invoke fragment="scripts" />
 </head>
@@ -54,7 +69,12 @@
                     <div id="toggle-mobile-menu" tabindex="0">Menu</div>
                 </nav>
                 <nav id="mobile-menu">
-                    <p:frontend-menu />
+                    <ul>
+                        <c:forEach items="${pages.getMenu('top',locale.tag).items}" var="item">
+                            <li><a href="${root}${item.page.link}">${item.name}</a></li>
+                        </c:forEach>
+                    </ul>
+
                 </nav>
             </header>
 
@@ -67,7 +87,12 @@
                     <div id="toggle-mobile-menu" tabindex="0">Menu</div>
                 </div>
                 <nav id="mobile-menu">
-                    <p:frontend-menu />
+                    <ul>
+                        <c:forEach items="${pages.getMenu('top',locale.tag).items}" var="item">
+                            <li><a href="${root}${item.page.link}">${item.name}</a></li>
+                        </c:forEach>
+                    </ul>
+
                 </nav>
             </header>
 
@@ -80,28 +105,12 @@
 
     <footer>
         <nav>
-            <c:choose>
-                <c:when test="${locale.is('en')}">
-                    <ul>
-                        <li><a href="${root}">Home</a></li>
-                        <li><a href="${root}en/services">Services</a></li>
-                        <li><a href="${root}en/products">Products</a></li>
-                        <li><a href="${root}en/terms">Terms and Conditions</a></li>
-                        <li><a href="${root}en/privacy">Privacy Policy</a></li>
-                        <li><a href="${root}en/contact">Contact</a></li>
-                    </ul>
-                </c:when>
-                <c:otherwise>
-                    <ul>
-                        <li><a href="${root}hu">Főoldal</a></li>
-                        <li><a href="${root}hu/szolgaltatasok">Szolgáltatások</a></li>
-                        <li><a href="${root}hu/termekek">Termékek</a></li>
-                        <li><a href="${root}hu/felhasznalasi-feltetelek">Feltételek</a></li>
-                        <li><a href="${root}hu/adatkezeles">Adatkezelés</a></li>
-                        <li><a href="${root}hu/kapcsolat">Kapcsolat</a></li>
-                    </ul>
-                </c:otherwise>
-            </c:choose>        </nav>
+            <ul>
+                <c:forEach items="${pages.getMenu('bottom',locale.tag).items}" var="item">
+                    <li><a href="${root}${item.page.link}">${item.name}</a></li>
+                </c:forEach>
+            </ul>
+        </nav>
     </footer>
 
 </div>

@@ -1,16 +1,18 @@
 @import "vars.css";
 
-@font-face {
+/*@font-face {
     font-family: "Commodore Rounded";
     src: url(../fonts/Commodore_Rounded_v1.2.woff);
     font-weight: bold;
-}
-
+}*/
 
 body {
-    font-size: 16px;
     line-height: 1.25;
-    font-family: "Commodore Rounded", monospace;
+    /*font-family: "Commodore Rounded", "Courier New", monospace; font-size: 16px;*/
+    font-family: 'Ubuntu Mono', "Courier", monospace; font-size:21px;
+    /*font-family: 'Share Tech Mono', monospace; font-size: 20px;*/
+    /*font-family: 'Oxygen Mono', monospace; font-size: 20px;*/
+
 }
 
 span.log {

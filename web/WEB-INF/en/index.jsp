@@ -2,9 +2,10 @@
 --%><%@taglib prefix="t" tagdir="/WEB-INF/tags/templates" %><%--
 --%><%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%--
 --%><t:template title="Dynamic Programming Solutions"
-                description=""
-                index="true"
-                keywords="">
+                description="We design custom programming solutions that enhance user experiences, improve productivity and can help you grow your business."
+                robots="index,follow"
+                keywords=""
+                index="true">
     <jsp:attribute name="styles">
     </jsp:attribute>
     <jsp:attribute name="deferredStyles">
@@ -16,73 +17,62 @@
         <script src="${root}scripts/jquery-validation/jquery.validate.min.js"></script>
         <script src="${root}scripts/jquery-validation/localization/messages_hu.min.js"></script>
         <script src="${root}scripts/contactform.js"></script>
-        <script src='https://www.google.com/recaptcha/api.js?render=onload&hl=hu'></script>
+        <script src='https://www.google.com/recaptcha/api.js?render=onload&hl=${locale.tag}'></script>
     </jsp:attribute>
     <jsp:body>
 
         <div class="container page-head">
             <h1>Dynamic Programming Solutions</h1>
+            <p class="tagline tagline--green">We simplify business processes with tailor-made programming solutions.</p>
         </div>
 
         <article class="container main">
+
             <div class="red-box">
-                <p>Hi user!</p>
-                <p>Welcome to the <span class="explanation">backend<span aria-hidden="true" class="explanation-content">The end of something which is furthest from the front or the working end. In computing: a subordinate processor or program, not directly accessed by the user.</span></span>! We are NOT human beings. We are web developers who feel at home in this strange world.</p>
-                <p>We provide <em>custom web development for small companies</em>. We simplify problems and solve anything.</p>
+                <p><em>Attention! Do not attempt to reload this page or adjust your monitor.</em> This web page is not broken. It is exactly as it should be.</p>
+                <p>While it may look ugly to you, to the programmers at Dynamic Programming Solutions, it is a thing of beauty.</p>
+                <p>We’re well accustomed to creating lines of code and managing server via command-line terminal that look just like this “unattractive” page. Visitors never see our work, yet it enables the functionality of the websites they use. </p>
             </div>
 
             <div class="main-content">
-                <h2>Our solutions for you</h2>
-                <ul>
-                    <li><em>Automatisms</em> created for your company that provides fluent interaction
-                        with your customers.</li>
 
-                    <li><em>Web applications</em> specialized for your service created for your own need.</li>
-
-                    <li><em>Website development</em> and renewing old ones. We can create web design for human beings. More about the design services at our other website, <a href="https://artflowdesign.hu" target="_blank">ArtFlow Design</a></li>
-
-                    <li><em>Your own web server</em> built and managed based on your needs that will give you the fastest
-                        possible website with independence, flexibility and security.</li>
-                </ul>
-
-                <h2>Technologies we use</h2>
-
-                <p>We use pure languages, and those frameworks that are highly flexible. We know the core language and
-                    do not depend on the frameworks, achieving high flexibility.</p>
-
-                <p><span class="log warning">The following content may contain elements that are not suitable for some audiences.</span></p>
+                <h2>What We Do</h2>
 
                 <ul>
+                    <li>Could the customer experience on your site be improved?</li>
 
-                    <li>Backend: Java EE or PHP with laravel framework.</li>
+                    <li>Does your staff need a better administration system?</li>
 
-                    <li>Frontend: pure javascript and CSS</li>
-
-                    <li>Servers: Ubuntu linux server on Amazon AWS EC2</li>
-
-                    <li>Database: MySQL and PostgreSQL</li>
-
+                    <li>Are there repetitive tasks you’d like to automate?</li>
                 </ul>
 
-                <h2>Everything based on your specific needs</h2>
+                <p>Dynamic Programming Solutions solves these types of problems and more. We do custom programming that
+                    enhances user experiences, improves productivity, increases functionality and helps you grow your business.
+                    <a href="${root}${pages.getPage("services","en").link}">learn more</a></p>
 
-                <p>We do not use inflexible prebuilt systems. Instead, we do everything based on your own needs in KISS
-                    way: keep it stupid simple. You get everything you need, and nothing that you don't.</p>
+                <h2>Who We Are</h2>
 
-                <h2>We are a small team</h2>
+                <p>We’ve been designing custom programming solutions for over a decade. We’re adept at working with
+                    small to mid-sized businesses in diverse industries, helping them to succeed with technology that
+                    supports their critical workflows.
+                    <a href="${root}${pages.getPage("about","en").link}">learn more</a></p>
 
-                <p>Your project will not be lost among 3rd class programmers in a big company. We have just a few team
-                    members with complementing skills, who master their own field, thus your project will be handled
-                    firsthand by the top developers.</p>
+                <h2>How We Work</h2>
 
-                <h2>Get a quote</h2>
+                <p>Our development process begins with listening. We learn about your business and gain an understanding
+                    of your needs. Then we develop a cost-effective solution that achieves your objective and is
+                    scalable as your business grows.
+                    <a href="${root}${pages.getPage("process","en").link}">learn more</a></p>
 
-                <p>Tell us what you need. We will get back to you with specific questions and will provide pricing for
-                    the project. You will get an answer within 24 hours during business days.</p>
+                <h2>Let’s Talk</h2>
+
+                <p>We offer a free, no-obligation consultation. Contact us to discuss how we can help you optimize your business processes.
+                    <a href="${root}${pages.getPage("contact","en").link}">contact us</a></p>
 
             </div>
 
-            <div class="form-container">
+
+<%--            <div class="form-container">
                 <header><h3>Get A Quote!</h3></header>
                 <form id="contactform" action="${root}contact/send" method="post">
                     <div class="form-section">
@@ -112,7 +102,8 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            </div>--%>
+
         </article>
     </jsp:body>
 </t:template>

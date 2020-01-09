@@ -44,8 +44,16 @@ body {
     color: #18b218;
 }
 
+.standout {
+    color: white;
+}
+
 .emphasis, .tagline, .action, .info em {
     color: #ffff54;
+}
+
+.tagline--green {
+    color: #18ff18;
 }
 
 h1 {

@@ -6,7 +6,6 @@
     --space-h: calc((var(--char-height) - var(--border-size)) / 2);
     background-color: #b2b2b2;
     color: black;
-    padding: var(--char-height) var(--char-width);
     padding: calc(var(--char-height) + var(--space-h)) calc(var(--char-width) + var(--space-w));
     width: 100%;
     box-sizing: border-box;
@@ -15,11 +14,23 @@
     position: relative;
 }
 
+@media (min-width: 600px) {
+    .form-container {
+        padding: calc(var(--char-height) + var(--space-h)) calc(var(--char-width) + var(--space-w));
+    }
+}
+
 .form-container header {
     position: absolute;
     top: calc(var(--char-height));
     left: 0;
     right: 0;
+}
+
+@media (min-width: 600px) {
+    .form-container header {
+        top: calc(var(--char-height));
+    }
 }
 
 .form-container header h3 {
@@ -37,7 +48,14 @@ form {
 
 .form-container form .form-section {
     padding: var(--space-h) var(--char-width);
-    padding: var(--space-h) calc(var(--char-width) + var(--space-w));
+    padding: var(--space-h) var(--space-w);
+}
+
+@media (min-width: 600px) {
+    .form-container form .form-section {
+        padding: var(--space-h) var(--char-width);
+        padding: var(--space-h) calc(var(--char-width) + var(--space-w));
+    }
 }
 
 .form-container form .form-section:not(:first-child) {

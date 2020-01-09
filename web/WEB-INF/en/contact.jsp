@@ -1,7 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8"%><%--
 --%><%@taglib prefix="t" tagdir="/WEB-INF/tags/templates" %><%--
 --%><%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%--
---%><t:template title="Contact" keywords="">
+--%><t:template title="Contact Dynamic Programming Solutions, Serving Customers Worldwide"
+                description="We’re here for you. Contact us to discuss your challenges. We have solutions!"
+                robots="index,follow">
     <jsp:attribute name="styles">
     </jsp:attribute>
     <jsp:attribute name="scriptsBottom">
@@ -9,7 +11,7 @@
         <script src="${root}scripts/jquery-validation/jquery.validate.min.js"></script>
         <script src="${root}scripts/jquery-validation/localization/messages_hu.min.js"></script>
         <script src="${root}scripts/contactform.js"></script>
-        <script src='https://www.google.com/recaptcha/api.js?render=onload&hl=hu'></script>
+        <script src='https://www.google.com/recaptcha/api.js?render=onload&hl=${locale.tag}'></script>
     </jsp:attribute>
     <jsp:body>
 
@@ -20,8 +22,7 @@
         <article class="container main">
 
             <div class="main-content">
-                <p>Tell us what you need. We will get back to you with specific questions and will provide pricing for
-                    the project. You will get an answer within 24 hours during business days.</p>
+                <p>Are you ready to explore simplifying your critical work flows?  Tell us your challenges. We have solutions!</p>
             </div>
 
             <div class="form-container">

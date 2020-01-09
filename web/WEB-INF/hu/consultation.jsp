@@ -1,16 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8"%><%--
 --%><%@taglib prefix="t" tagdir="/WEB-INF/tags/templates" %><%--
 --%><%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%--
---%><t:template title="Dynamic Programming Solutions"
-                description="We design custom programming solutions that enhance user experiences, improve productivity and can help you grow your business."
-                robots="index,follow"
-                keywords=""
-                index="true">
+--%><t:template title="Request a Free Consultation, Explore Custom Programming Solutions for Your Business"
+                description="Dynamic Programming Solutions is happy to talk with you about your project. We provide free, no obligation estimates. Discover what a custom solution can do for your business."
+                robots="index,follow">
     <jsp:attribute name="styles">
-    </jsp:attribute>
-    <jsp:attribute name="deferredStyles">
-    </jsp:attribute>
-    <jsp:attribute name="scripts">
     </jsp:attribute>
     <jsp:attribute name="scriptsBottom">
         <script src="${root}scripts/jquery.min.js"></script>
@@ -22,53 +16,16 @@
     <jsp:body>
 
         <div class="container page-head">
-            <h1>Dynamic Programming Solutions</h1>
-            <p class="emphasis" style="text-align: center">We simplify business processes with tailor-made programming solutions.</p>
+            <h1>Request a Free Consultation</h1>
         </div>
 
         <article class="container main">
 
             <div class="main-content">
-
-                <div class="standout">
-                    <p class="warning">Do not attempt to reload this page or adjust your monitor. This web page is not broken. It is exactly as it should be.</p>
-                </div>
-
-                <h2>What We Do</h2>
-
-                <ul>
-                    <li>Could the customer experience on your site be improved?</li>
-
-                    <li>Does your staff need a better administration system?</li>
-
-                    <li>Are there repetitive tasks you’d like to automate?</li>
-                </ul>
-
-                <p>Dynamic Programming Solutions solves these types of problems and more. We do custom programming that
-                    enhances user experiences, improves productivity, and helps you grow your business.
-                    <a href="${root}${pages.getPage("services","en").link}">learn more</a></p>
-
-                <h2>Who We Are</h2>
-
-                <p>We’ve been designing custom programming solutions for over a decade. We’re adept at working with
-                    small to mid-sized businesses in diverse industries, helping them to succeed with technology that
-                    supports their critical workflows.
-                    <a href="${root}${pages.getPage("about","en").link}">learn more</a></p>
-
-                <h2>How We Work</h2>
-
-                <p>Our development process begins with listening. We learn about your business and gain an understanding
-                    of your needs. Then we develop a cost-effective solution that achieves your objective and is
-                    scalable as your business grows.
-                    <a href="${root}${pages.getPage("process","en").link}">learn more</a></p>
-
-                <h2>Let’s Talk</h2>
-
-                <p>We offer a free, no-obligation consultation. Contact us to discuss how we can help you optimize your business processes.
-                    <a href="${root}${pages.getPage("contact","en").link}">contact us</a></p>
-
+                <p>Because we specialize in custom programming, every project we do is different and must be quoted individually. When we talk with you about the parameters for the project, we’ll be able to assess the scope of the project and the number of hours needed to complete it. We’ll give you a firm quote and timeline so you know exactly what to expect. </p>
+                <p>For larger projects, we’ll set milestones that allow you to review our progress and provide feedback throughout the process. </p>
+                <p>There’s no cost, no obligation to get a quote on your project. </p>
             </div>
-
 
             <div class="form-container">
                 <header><h3>Get A Quote!</h3></header>
@@ -101,7 +58,7 @@
                     </div>
                 </form>
             </div>
-
         </article>
+
     </jsp:body>
 </t:template>

@@ -27,6 +27,7 @@
           <factory-entry name="NewPersistenceUnit" />
           <factory-entry name="UserDataPU" />
         </datasource-mapping>
+        <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
       </configuration>
     </facet>
@@ -180,7 +181,7 @@
     <orderEntry type="library" name="Maven: com.dynamicprogrammingsolutions:dps.logging:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.dynamicprogrammingsolutions:dps.markdown:1.0.2" level="project" />
     <orderEntry type="library" name="Maven: com.atlassian.commonmark:commonmark:0.11.0" level="project" />
-    <orderEntry type="library" name="Maven: com.atlassian.commonmark:commonmark-ext-gfm-tables:0.11.0" level="project" />
+    <orderEntry type="library" name="Maven: com.atlassian.commonmark:commonmark-ext-gfm-tables:0.13.1" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.8.3" level="project" />
     <orderEntry type="library" name="Maven: com.maxmind.geoip2:geoip2:2.12.0" level="project" />
     <orderEntry type="library" name="Maven: com.maxmind.db:maxmind-db:1.2.2" level="project" />

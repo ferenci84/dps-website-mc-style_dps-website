@@ -86,7 +86,7 @@
 
 .h2-wrapper > div:nth-child(1) div::before,
 .h2-wrapper > div:nth-child(3) div::before {
-  content: "---------------------------------------------------------";
+  content: "---------------------------------------------------------------------------------------------------";
   white-space: nowrap;
   position: absolute; }
 
@@ -121,7 +121,7 @@
   color: white; }
 
 .h2-wrapper h2 {
-  display: table;
+  display: flex;
   color: #ffff54;
   margin: 0 var(--char-width); }
 

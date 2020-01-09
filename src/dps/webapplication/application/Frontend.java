@@ -78,7 +78,6 @@ public class Frontend {
     @Path("{link:(.*)}")
     public View page(@PathParam("link") String link) {
 
-        System.out.println("link: " + link);
         Page page = pages.getPageByLink(link);
         if (page == null) throw new NotFoundException();
         setLocale(page.getLan());

@@ -34,7 +34,7 @@ public class Settings {
     @Produces(MediaType.TEXT_HTML)
     public View index(@Context HttpServletRequest request) {
         request.setAttribute("mailSettings",configuration.reloadConfig(MailSettings.class));
-        request.setAttribute("applicationSettings",configuration.reloadConfig(dps.webapplication.configuration.Settings.class));
+        request.setAttribute("applicationSettings",configuration.reloadConfig(dps.webapplication.settings.Settings.class));
         return new View("/WEB-INF/admin/settings/all.jsp");
     }
 
