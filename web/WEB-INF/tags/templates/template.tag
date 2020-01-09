@@ -26,6 +26,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono|Share+Tech+Mono|Ubuntu+Mono:400,400i,700,700i&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="${root}styles${dev?"-dev":(development?"-dev":"")}/reset.css" />
     <link rel="stylesheet" href="${root}styles${dev?"-dev":(development?"-dev":"")}/typography.css" />
     <link rel="stylesheet" href="${root}styles${dev?"-dev":(development?"-dev":"")}/headings.css" />
